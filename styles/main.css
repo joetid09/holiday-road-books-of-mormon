@@ -1,0 +1,74 @@
+body {
+    background-color: rgba(245, 245, 245, 0.616);
+}
+
+.logoBox {
+
+}
+
+.logoPic {
+    height: 2.5em; 
+    width: auto;
+    margin: .5em;
+}
+
+.roadTripImage {
+    height: 32em;
+    width: auto;
+    display: flex;
+    align-self: center;
+}
+
+.topOfPage {
+    background-image: url("../images/roadtrip.jpg");
+    background-color: rgba(245, 245, 245, 0.616);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons {
+    display: flex;
+    align-items: flex-end;
+    /* align-self: center; */
+    justify-content: space-around;
+}
+
+.parkHeader {
+    display: flex;
+    justify-content: center;
+    margin: 2em;
+}
+
+.eatBazzarContainer {
+    display: flex;
+    justify-content: space-around;
+    margin: 2em;    
+}
+
+.eateries {
+    border: 1em solid black;
+    flex-basis: 30%;
+}
+
+.bizzarr {
+    border: 1em solid goldenrod;
+    flex-basis: 30%;
+}
+
+.weatherContainer {
+    display: flex;    
+    justify-content: center;
+}
+
+.weather {
+    border: 1em solid skyblue;
+    align-self: center;
+    flex-basis: 85%;
+}
+
+footer {
+    text-align: center;
+    margin: 3em;
+}
