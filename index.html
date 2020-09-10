@@ -5,19 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vans Mormisson</title>
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 
 <body>
     <header>
-        <div class="logo-box">
+        <div class="logoBox">
             <img src="./images/logo.png" alt="picture of logo" height="50px" width="75px">
         </div>
     </header>
 
     <main>
-        <section class="top-of-page">
+        <section class="topOfPage">
             <div class="image">
-                <img class="road-trip-image" src="./images/roadtrip.jpg" alt="picture of a loaded up van">
+                <img class="roadTripImage" src="./images/roadtrip.jpg" alt="picture of a loaded up van">
             </div>
 
             <div class="buttons">
@@ -34,7 +35,7 @@
                         <!--input API list here-->
                     </option>
                 </select>
-                <select id="bizarries">
+                <select id="biz">
                     <option>Let's get bizarre</option>
                     <option>
                         <!--input API list here-->
@@ -44,13 +45,29 @@
             </div>
         </section>
 
-        <section class="park-header">
+        <!-- Park header, take border bg off -->
+        <section class="parkHeader">
             <button onClick="parkDetails">
                 <h1>Click this park to get details</h1>
             </button>
         </section>
 
+        <!-- Eateries and bazzarreries container -->
+        <section class="eatBazzarContainer">
+            <article class="eateries"></article>
+            <ul class="eat list"></ul>
+            <article class="biz"></article>
+            <ul class="biz list"></ul>
+        </section>
+
+        <!-- This is for the weather contianer -->
+        <section class="weatherContainer">
+            <article class="weather"></article>
+        </section>
+
+        <footer>&copy;2020 Books of Mormon</footer>
     </main>
+    <script type="module" src="./scripts/"></script>
 </body>
 
 </html>
