@@ -10,16 +10,15 @@
 
 <body>
     <header>
-        <div class="logoBox">
-            <img src="./images/logo.png" alt="picture of logo" height="50px" width="75px">
-        </div>
     </header>
 
     <main>
         <section class="topOfPage">
-            <div class="image">
-                <img class="roadTripImage" src="./images/roadtrip.jpg" alt="picture of a loaded up van">
+            <div class="logoBox">
+                <img src="./images/logo.png" class="logoPic" alt="picture of logo">
             </div>
+
+            <div class="roadTripImage"></div>
 
             <div class="buttons">
                 <!-- select buttons for drop downs go here, flexbox for row -->
@@ -54,20 +53,33 @@
 
         <!-- Eateries and bazzarreries container -->
         <section class="eatBazzarContainer">
-            <article class="eateries"></article>
-            <ul class="eat list"></ul>
-            <article class="biz"></article>
-            <ul class="biz list"></ul>
+
+            <article class="eateries">
+                <h2>EAT ME</h2>
+                <ul class="eat list">
+                    <li>aaa</li>
+                </ul>
+            </article>
+
+            <article class="bizzarr">
+                <h2>DRINK ME</h2>
+                <ul class="biz list">
+                    <li>aaa</li>
+                </ul>
+            </article>
+
         </section>
 
         <!-- This is for the weather contianer -->
         <section class="weatherContainer">
-            <article class="weather"></article>
+            <article class="weather">
+                <h2>WEATHER</h2>
+            </article>
         </section>
 
         <footer>&copy;2020 Books of Mormon</footer>
     </main>
-    <script type="module" src="./scripts/"></script>
+    <script type="module" src="./scripts/main.js"></script>
 </body>
 
 </html>
