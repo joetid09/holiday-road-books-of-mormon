@@ -10,16 +10,15 @@
 
 <body>
     <header>
-        <div class="logoBox">
-            <img src="./images/booksOfMormon.png" alt="picture of logo" height="50px" width="75px">
-        </div>
     </header>
 
-    <main>
+    <main id="getHub">
         <section class="topOfPage">
-            <div class="image">
-                <img class="roadTripImage" src="./images/roadtrip.jpg" alt="picture of a loaded up van">
+            <div class="logoBox">
+                <img src="./images/booksOfMormon.png" class="logoPic" alt="picture of logo">
             </div>
+
+            <div class="roadTripImage"></div>
 
             <div class="buttons">
                 <!-- select buttons for drop downs go here, flexbox for row -->
@@ -30,10 +29,7 @@
                     </option>
                 </select>
                 <select id="eateries">
-                    <option>What's for Dinner?</option>
-                    <option>
-                        <!--input API list here-->
-                    </option>
+                    <option value="0">What's for Dinner?</option>
                 </select>
                 <select id="biz">
                     <option>Let's get bizarre</option>
@@ -54,20 +50,33 @@
 
         <!-- Eateries and bazzarreries container -->
         <section class="eatBazzarContainer">
-            <article class="eateries"></article>
-            <ul class="eat list"></ul>
-            <article class="biz"></article>
-            <ul class="biz list"></ul>
+
+            <article class="eateries">
+                <!-- <h2>EAT ME</h2>
+                <ul class="eat list">
+                    <li>aaa</li>
+                </ul> -->
+            </article>
+
+            <article class="bizzarr">
+                <h2>DRINK ME</h2>
+                <ul class="biz list">
+                    <li>aaa</li>
+                </ul>
+            </article>
+
         </section>
 
         <!-- This is for the weather contianer -->
         <section class="weatherContainer">
-            <article class="weather"></article>
+            <article class="weather">
+                <h2>WEATHER</h2>
+            </article>
         </section>
 
         <footer>&copy;2020 Books of Mormon</footer>
     </main>
-    <script type="module" src="./scripts/"></script>
+    <script type="module" src="./scripts/main.js"></script>
 </body>
 
 </html>
