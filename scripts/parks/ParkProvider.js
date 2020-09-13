@@ -4,7 +4,8 @@ let parks = [];
 
 // Use fetch to get TN parks from the NPS api
 
-
+export const useParks = () => parks.slice()
+//console.log(useParks())
 
 export const getParks = () => {
     return fetch("https://developer.nps.gov/api/v1/parks?stateCode=tn&api_key=beCzLZwfrt7DummCQLdSR9DMB0Y8OGAfkzCqPA2L")
@@ -12,14 +13,14 @@ export const getParks = () => {
         .then(
             parsedResponse => {
                 //console.table(parsedResponse)
-                parks = parsedResponse
+                parks = parsedResponse.data
+                //console.table(parks)
             }
         )
 }
 
-export const useParks = () => {
-    return parks.toString();
-}
+
+
 
 // Create a copy of the original array: UseParks()
 
