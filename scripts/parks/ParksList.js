@@ -1,4 +1,4 @@
-import { ParkHTML } from "./Parks.js"
+import { ParkHTML, } from "./Parks.js"
 import { getParks, useParks } from "./ParkProvider.js"
 
 const eventHub = document.querySelector("#getHub")
@@ -8,6 +8,7 @@ export const ParkList = () => {
     getParks()
         .then(useParks)
         .then(render())
+
 }
 
 eventHub.addEventListener('parkSelected', changeEvent => {
@@ -20,6 +21,9 @@ eventHub.addEventListener('parkSelected', changeEvent => {
     }
 })
 
+/* Map through the array and get the single park ready to be rendered to DOM.
+Not sure if I need this, because the .filter above should only be returning one park.
+*/
 const render = (parksCollection = []) => {
     contentTarget.innerHTML = parksCollection.map((singlePark) => {
         return ParkHTML(singlePark)
