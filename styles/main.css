@@ -2,9 +2,9 @@ body {
     background-color: rgba(245, 245, 245, 0.616);
 }
 
-.logoBox {
+/* .logoBox {
 
-}
+} */
 
 .logoPic {
     height: 2.5em; 
@@ -57,6 +57,8 @@ body {
     flex-basis: 30%;
 }
 
+/* WEATHER */
+
 .weatherContainer {
     display: flex;    
     justify-content: center;
@@ -68,6 +70,7 @@ body {
     flex-basis: 85%;
 }
 
+    
 footer {
     text-align: center;
     margin: 3em;

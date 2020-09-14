@@ -12,7 +12,7 @@
     <header>
     </header>
 
-    <main>
+    <main class="container">
         <section class="topOfPage">
             <div class="logoBox">
                 <img src="./images/logo.png" class="logoPic" alt="picture of logo">
@@ -71,10 +71,15 @@
         </section>
 
         <!-- This is for the weather contianer -->
+
         <section class="weatherContainer">
-            <article class="weather">
-                <h2>WEATHER</h2>
-            </article>
+            <div class="component__weather-box">
+                <div class="component__weather-content">
+                    <div class="weather-content__overview"></div>
+                    <div class="weather-content__temp"></div>
+                </div>
+                <div class="component__forecast-box"></div>
+            </div>
         </section>
 
         <footer>&copy;2020 Books of Mormon</footer>
