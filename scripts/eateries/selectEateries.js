@@ -9,7 +9,6 @@ const getHub = document.querySelector("#getHub")
 getHub.addEventListener("eateryChosen", event => {
     console.log("beginning of eatery filter")
     if (event.detail.eateryThatWasChosen !== "0") {
-        debugger;
         let eatery = useEateries().filter(restaurant => {
             return restaurant.businessName === event.detail.eateryThatWasChosen
         }
