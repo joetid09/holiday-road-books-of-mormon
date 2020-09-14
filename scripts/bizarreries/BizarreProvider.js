@@ -19,7 +19,7 @@ export const getBizarre = () => {
     return fetch('http://holidayroad.nss.team/bizarreries')
     .then(response => response.json())
     .then(parsedBizarre => {
-        bizarre = parsedBizarre
+        bizarre = parsedBizarre.filter(tacoObj => tacoObj.state === "TN")
     })
 }
 
@@ -39,5 +39,3 @@ export const saveBizarre = bizarreObj => {
         dispatchStateChangeEvent()
     })
 }
-
-

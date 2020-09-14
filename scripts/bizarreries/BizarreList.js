@@ -7,29 +7,34 @@ import { BizarreSelect } from "./BizarreSelect.js";
 //Step 7 - Store HTML in the getHub HTML class
 const eventHub = document.querySelector("#getHub")
 
-//Step ? - Create
-
-//Step 9 - Setup a event listener
-eventHub.addEventListener("bizarreStateChanged", event => {
-    render(useBizarre())
+//Listen to the custom event you dispatched in BizarreSelect.js
+eventHub.addEventListener("bizarreChosen", event => {
+    if(event.detail.bizarreChosen !== "0") {
+        const matchBizarre = useBizarre().filter(tacoBizarre => {
+            return tacoBizarre.name === event.detail.bizarreThatWasChosen
+        })
+        render(matchBizarre)
+    } else {
+        render(useBizarre());
+    }
 })
 
-//Step 10 - Create exportable function that takes getBizarre() then calls useBizarre() then renders and passes in useBizarre 
+//Create exportable function that takes getBizarre() then calls useBizarre() then renders and passes in useBizarre 
 export const bizarreList = () => {
     getBizarre()
-    .then(useBizarre)
-    .then(render)
+    .then(() => {
+        const bizarreArray = useBizarre();
+        console.log("bizarreArray", bizarreArray);
+        render(bizarreArray)
+    })
 }
 
-//Step 11 - Create a render function 
-//Step 12 - Store HTML in the eatBazzarContainer HTML class
-//Step 13 - Map over the bizarre array
-//Step 14 - Remove commas
-const render = (bizarreAry) => {
-    const domTarget = document.querySelector(".bizzarr")
-    let htmlArray = bizarreAry.map(tacoBizarre => {
-        return bizarreMade(tacoBizarre);
-    })
-    domTarget.innerHTML += htmlArray.join("");
+
+//
+const render = (bizarreArray = []) => {
+    const contentTarget = document.querySelector(".bizlist")
+    contentTarget.innerHTML = bizarreArray.map((singleBizarre) => {
+        return bizarreMade(singleBizarre)
+    }).join("")
 }
 

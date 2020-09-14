@@ -5,4 +5,4 @@ import { bizarreList } from "./bizarreries/BizarreList.js";
 
 // bizarreList(); 
 BizarreSelect();
-bizarreList();
+// bizarreList();
