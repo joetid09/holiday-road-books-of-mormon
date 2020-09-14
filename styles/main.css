@@ -39,6 +39,11 @@ body {
     display: flex;
     justify-content: center;
     margin: 2em;
+    font-family: 'Fredericka the Great', cursive;
+}
+
+h1{
+    font-size: 2em;
 }
 
 .eatBazzarContainer {
@@ -48,25 +53,21 @@ body {
 }
 
 .eateries {
-    border: 1em solid black;
+    /* border: 1em solid black; */
     flex-basis: 30%;
+    font-family: 'Courier Prime', monospace;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 1em; 
 }
 
 .bizzarr {
-    border: 1em solid goldenrod;
+    /* border: 1em solid goldenrod; */
     flex-basis: 30%;
+    font-family: 'Courier Prime', monospace;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 1em;
 }
 
-.weatherContainer {
-    display: flex;    
-    justify-content: center;
-}
-
-.weather {
-    border: 1em solid skyblue;
-    align-self: center;
-    flex-basis: 85%;
-}
 
 footer {
     text-align: center;

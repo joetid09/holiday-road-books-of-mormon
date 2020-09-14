@@ -32,7 +32,7 @@ export const bizarreList = () => {
 
 //
 const render = (bizarreArray = []) => {
-    const contentTarget = document.querySelector(".bizlist")
+    const contentTarget = document.querySelector(".bizzarr")
     contentTarget.innerHTML = bizarreArray.map((singleBizarre) => {
         return bizarreMade(singleBizarre)
     }).join("")
