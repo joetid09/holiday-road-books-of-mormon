@@ -4,8 +4,7 @@ export const useWeatherData = () => {
     return weather.slice();
 }
 
-const URL = "https://api.openweathermap.org/data/2.5/forecast/daily?" +
-    "q=Nashville&cnt=7&units=imperial&APPID=a65ae4abf893dbff2aa3708e7c24953c";
+const URL = "api.openweathermap.org/data/2.5/forecast?q=nashville&appid=4f3b62dffc1a390df4e9b0693dc0f8e3";
 
 export const getWeatherData = () => {
     let headers = new Headers();

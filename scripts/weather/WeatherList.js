@@ -1,7 +1,7 @@
 import { useWeatherData, getWeatherData } from './WeatherProvider.js';
 import { WeatherHTML } from './Weather.js';
 
-// const eventHub = document.querySelector(".container")
+// const eventHub = document.querySelector("#getHub")
 
 // /* ****  ARRESTING OFFICER **** */
 // eventHub.addEventListener('officerChosen', event => {
