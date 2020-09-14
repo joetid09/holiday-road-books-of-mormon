@@ -19,7 +19,7 @@ getHub.addEventListener("eateryDetails", event => {
     if (event.target.id === "eateryDetails") {
         const detailEvent = new CustomEvent("detailsChosen", {
             detail: {
-                detailButtonChosen = "details"
+                detailButtonChosen: "details"
             }
         })
         getHub.dispatchEvent(detailEvent)
@@ -30,7 +30,7 @@ getHub.addEventListener("eateryDetails", event => {
 export const eateryItinerary = (eateryObject) => {
     return `<h3>${eateryObject.businessName}</h3>
                 <p>${eateryObject.description}</p>
-                <button type="button"id="eateryDetails">details</button>`
+                <button type="button"id="eateryDetails" onClick="alert('${eateryObject.businessName})"git >details</button>`
     // <ul class="eateryAmenities" >
     // <li>${eateryObject.amenities.wheelchairAccessible}</li>
     // <li>${eateryObject.}</li>
