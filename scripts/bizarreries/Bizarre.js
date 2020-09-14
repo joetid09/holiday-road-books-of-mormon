@@ -1,4 +1,4 @@
-//Step 5 - Design how the Bizzarre will display on the site with HTML with exportable function
+//Design how the Bizzarre will display on the site with HTML with exportable function
 
 export const bizarreMade = (bizObj) => {
     return `

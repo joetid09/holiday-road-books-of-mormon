@@ -1,10 +1,10 @@
-//Step 6 - Import exportable functions made thus far
+//Import exportable functions made thus far
 import { bizarreMade } from "./Bizarre.js";
 import { useBizarre, getBizarre } from "./BizarreProvider.js";
 import { BizarreSelect } from "./BizarreSelect.js";
 
 
-//Step 7 - Store HTML in the getHub HTML class
+//Store HTML in the getHub HTML class
 const eventHub = document.querySelector("#getHub")
 
 //Listen to the custom event you dispatched in BizarreSelect.js
