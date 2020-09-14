@@ -14,6 +14,9 @@ getHub.addEventListener("eateryChosen", event => {
         }
         )
         renderItinerary(eatery)
+    } else {
+        const placeHolder = document.querySelector(".eateries")
+        placeHolder.innerHTML = `<h2>Please select an eatery</h2>`
     }
 })
 
