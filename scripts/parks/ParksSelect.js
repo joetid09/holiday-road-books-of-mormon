@@ -2,8 +2,13 @@
 
 import { getParks, useParks } from "./ParkProvider.js"
 
+/* Reference the place on the DOM where the eventHub lives, and the place where
+contentTarget where the select will be rendered */
+
 const contentTarget = document.querySelector("#parks")
 const eventHub = document.querySelector("#getHub")
+
+// Export the ParkSelect function
 
 export const ParkSelect = () => {
     getParks()
@@ -15,8 +20,8 @@ export const ParkSelect = () => {
 
 }
 
+// Render the dropdown html
 const render = parksCollection => {
-    //const listItems = useParks()
     contentTarget.innerHTML = `
     <select id="#parks">
         <option value="0">Please select a park</option>
@@ -30,6 +35,7 @@ const render = parksCollection => {
 `
 }
 
+// Add an eventListener and a custom event for the selected park
 eventHub.addEventListener('change', changeEvent => {
     if (changeEvent.target.id === "parks") {
         const parkSelectedEvent = new CustomEvent("parkSelected", {
@@ -37,7 +43,7 @@ eventHub.addEventListener('change', changeEvent => {
                 parkThatWasSelected: changeEvent.target.value
             }
         })
-        //console.log(changeEvent)
+
 
         eventHub.dispatchEvent(parkSelectedEvent)
 

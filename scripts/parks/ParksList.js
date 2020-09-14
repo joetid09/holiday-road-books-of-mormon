@@ -10,13 +10,16 @@ export const ParkList = () => {
         .then(render())
 
 }
-
+//Listen for custom event dispatched from ParkSelect
 eventHub.addEventListener('parkSelected', changeEvent => {
     if (changeEvent.detail.parkThatWasSelected !== "0") {
+
+        // Filter parks app state down to the park that was selected
 
         const selectedPark = useParks().filter(currentPark => {
             return currentPark.fullName === changeEvent.detail.parkThatWasSelected
         })
+        // Invoke render() and pass the filtered collection as an argument
         render(selectedPark)
     }
 })
@@ -30,20 +33,3 @@ const render = (parksCollection = []) => {
     }).join("");
 
 }
-
-
-
-
-
-
-
-/*const render = (parkObj) => {
-    contentTarget.innerHTML = `
-    <section class="parkHeader">
-        <h2>${parkObj.fullName}</h2>
-    </section>
-    `
-}*/
-
-
-
