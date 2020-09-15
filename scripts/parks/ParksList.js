@@ -1,5 +1,6 @@
 import { ParkHTML, } from "./Parks.js"
 import { getParks, useParks } from "./ParkProvider.js"
+import { SelectedParkWeather } from '../weather/WeatherSelect.js';
 
 const eventHub = document.querySelector("#getHub")
 const contentTarget = document.querySelector(".parkHeader")
@@ -21,6 +22,7 @@ eventHub.addEventListener('parkSelected', changeEvent => {
         })
         // Invoke render() and pass the filtered collection as an argument
         render(selectedPark)
+        SelectedParkWeather();
     }
 })
 
