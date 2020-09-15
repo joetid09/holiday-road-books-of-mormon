@@ -16,6 +16,5 @@ ParkList()
 // bizarreList(); 
 BizarreSelect();
 // bizarreList();
-// WeatherDisplay();
+eaterySelectList();
 SelectedParkWeather();
-eaterySelectList()

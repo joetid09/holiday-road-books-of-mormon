@@ -1,31 +1,43 @@
 import { getWeatherData } from './WeatherProvider.js';
 
-// Get a reference to the DOM element where the <select> will be rendered****
 
-// const eventHub = document.querySelector(".container")
-// const contentTarget = document.querySelector(".weatherContainer")
+// import { ParkHTML, } from "./Parks.js"
+// import { getParks, useParks } from "./ParkProvider.js"
 
-// On the event hub, listen for a "change" event.****
+// // Get a reference to the DOM element where the <select> will be rendered****
 
-// eventHub.addEventListener("change", event => {
+// const eventHub = document.querySelector("#getHub")
+// const contentTarget = document.querySelector(".parkHeader")
 
-//     //WHEN USER SELECTS STATE PARK, 5 DAY FORECAST POPULATES FOR THAT AREA IN WEATHER WIDGET*********
+// export const ParkList = () => {
+//     getParks()
+//         .then(useParks)
+//         .then(render())
 
-//     if (event.target.id === "parkSelected") {
-//         // Get the name of the selected park
-//         const selectedPark = event.target.value
+// }
+// //Listen for custom event dispatched from ParkSelect
+// eventHub.addEventListener('parkSelected', changeEvent => {
+//     if (changeEvent.detail.parkThatWasSelected !== "0") {
 
-//         // Define a custom event
-//         const customEvent = new CustomEvent("parkChosen", {
-//             detail: {
-//                 parkThatWasChosen: selectedPark
-//             }
+//         // Filter parks app state down to the park that was selected
+
+//         const selectedPark = useParks().filter(currentPark => {
+//             return currentPark.fullName === changeEvent.detail.parkThatWasSelected
 //         })
-
-//         // Dispatch event to event hub
-//         eventHub.dispatchEvent(customEvent)
+//         // Invoke render() and pass the filtered collection as an argument
+//         render(selectedPark)
 //     }
 // })
+
+// /* Map through the array and get the single park ready to be rendered to DOM.
+// Not sure if I need this, because the .filter above should only be returning one park.
+// */
+// const render = (parksCollection = []) => {
+//     contentTarget.innerHTML = parksCollection.map((singlePark) => {
+//         return ParkHTML(singlePark)
+//     }).join("");
+
+// }
 
 
 const CURRENT_LOCATION = document.getElementsByClassName('weather-content__overview')[0];
