@@ -1,6 +1,6 @@
-// Prepare individual park to be displayed in HTML
-export let URL = "https://api.openweathermap.org/data/2.5/onecall?lat=36&lon=-86&exclude=current,hourly,minutely&appid=4f3b62dffc1a390df4e9b0693dc0f8e3&units=imperial";
+import { URL } from '../weather/WeatherProvider.js';
 
+// Prepare individual park to be displayed in HTML
 export const ParkHTML = (parkObj) => {
     URL = `https://api.openweathermap.org/data/2.5/onecall?lat=${parkObj.latitude}&lon=${parkObj.longitude}&exclude=current,hourly,minutely&appid=4f3b62dffc1a390df4e9b0693dc0f8e3&units=imperial`;
 
