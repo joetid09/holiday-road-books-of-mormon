@@ -23,6 +23,8 @@ eventHub.addEventListener('parkSelected', changeEvent => {
         // Invoke render() and pass the filtered collection as an argument
         render(selectedPark)
         SelectedParkWeather();
+    } else {
+        contentTarget.innerHTML = "<h1>Please select a park</h1>"
     }
 })
 
