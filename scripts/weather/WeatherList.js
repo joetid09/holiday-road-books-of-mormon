@@ -1,5 +1,5 @@
-import { useWeatherData, getWeatherData } from './WeatherProvider.js';
-import { WeatherHTML } from './Weather.js';
+// import { useWeatherData, getWeatherData } from './WeatherProvider.js';
+// import { WeatherHTML } from './Weather.js';
 
 // const eventHub = document.querySelector("#getHub")
 
@@ -23,22 +23,22 @@ import { WeatherHTML } from './Weather.js';
 // })
 
 
-export const WeatherDisplay = () => {
-    getWeatherData()
-        .then(() => {
-            const weatherArray = useWeatherData();
-            console.log("weatherArray", weatherArray);
-            addWeatherToDOM(weatherArray);
-        })
-}
+// export const WeatherDisplay = () => {
+//     getWeatherData()
+//         .then(() => {
+//             const weatherArray = useWeatherData();
+//             console.log("weatherArray", weatherArray);
+//             addWeatherToDOM(weatherArray);
+//         })
+// }
 
-const addWeatherToDOM = (aWeatherArray) => {
-    const domElement = document.querySelector(".weatherContainer");
+// const addWeatherToDOM = (aWeatherArray) => {
+//     const domElement = document.querySelector(".weatherContainer");
 
-    let HTMLArray = aWeatherArray.map(forecast => {
-        return WeatherHTML(forecast);
-    })
-    console.log("HTMLArray", HTMLArray);
+//     let HTMLArray = aWeatherArray.map(forecast => {
+//         return WeatherHTML(forecast);
+//     })
+//     console.log("HTMLArray", HTMLArray);
 
-    domElement.innerHTML += HTMLArray.join("");
-}
+//     domElement.innerHTML += HTMLArray.join("");
+// }
