@@ -89,7 +89,7 @@ h1{
 
 body {
     background: #dce2e5;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Courier Prime', monospace;
     font-weight: 100;
     font-size: 11px;
   }
@@ -97,7 +97,7 @@ body {
   .component__weather-box {
     margin: 30px auto;
     width: 420px;
-    border: 1px solid skyblue;
+    /* border: 1px solid skyblue; */
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 2px 5px 20px 1px #444;
@@ -106,8 +106,8 @@ body {
   .component__weather-content {
     position: relative;
     overflow: hidden;
-    color: #fff;
-    background:skyblue;
+    color: black;
+    /* background:skyblue; */
     height: 120px;
   }
   
@@ -183,18 +183,18 @@ body {
   }
   
   .forecast-item__heading {
-    background: rgb(29, 176, 224);
+    /* background: rgb(29, 176, 224); */
     border: 1px solid black;
     border-left: none;
     text-transform: uppercase;
-    color: #fff;
+    color: black;
     font-weight: 800;
     padding: 10px;
   }
   
   .forecast-item__info {
-    background: skyblue;
-    color: #fff;
+    /* background: skyblue; */
+    color: black;
     padding-bottom: 10px;
     border-right: 1px solid black;
   }
