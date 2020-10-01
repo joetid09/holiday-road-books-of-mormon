@@ -27,18 +27,34 @@ getHub.addEventListener("click", event => {
 })
 
 export const eateryItinerary = (eateryObject) => {
+    let amenetyCheck = (amenety) => {
+        if (amenety === false) {
+            return "✔"
+        }
+        else {
+            return "❌"
+        }
+    }
+    console.log(amenetyCheck(eateryObject.ameneties.petFriendly))
     return `<section class="eateryHead">
                     <h2>${eateryObject.businessName}</h2>
                 <div class="dropdown">
                     <span>Detail</span>
                         <div class="dropdown-content">
                             <p>${eateryObject.city}, ${eateryObject.state}<p>
-                             <p>${eateryObject.description}</p>
-                         </div>
-                </div>
-            </section>`
+                                <ul id="amenities">
+                                    <li>Pet Friendly: ${amenetyCheck(eateryObject.ameneties.petFriendly)}</li >
+                                    <li>Wheelchair Accessibility: ${amenetyCheck(eateryObject.ameneties.wheelchairAccessible)}</li>
+                                    <li>Restrooms: ${amenetyCheck(eateryObject.ameneties.restrooms)}</li>
 
-    // < h3 > ${ eateryObject.businessName }</h3 >
+                             <p>${eateryObject.description}</p>
+                             <p>Pet friendly: ${eateryObject.ameneties.petFriendly}</p>
+                             
+                         </div >
+                </div >
+            </section > `
+
+    // < h3 > ${eateryObject.businessName}</h3 >
     //     <div class="hoverButton">
     //         <span>Details</span>
     //         <div class="dropdown-content">
